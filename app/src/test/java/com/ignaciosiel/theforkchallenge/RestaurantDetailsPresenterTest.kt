@@ -46,7 +46,7 @@ class RestaurantDetailsPresenterTest {
     @Test
     fun testGetRestaurantDetails_withLastSearchNotNull_shouldReturnLastSearch() {
 
-        val expectedRestaurant = RestaurantDetails(id = 1234L, name = "name")
+        val expectedRestaurant = RestaurantDetails(1234L, "name")
 
         presenter.lastSearchedRestaurant = expectedRestaurant
         presenter.getRestaurantDetails("1234")
