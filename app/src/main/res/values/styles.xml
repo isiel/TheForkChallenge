@@ -1,0 +1,106 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="android:colorBackground">@color/white</item>
+        <item name="fontFamily">@font/ralewayx_regular</item>
+    </style>
+
+    <style name="AppTheme.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="colorPrimaryDark">@color/transparent</item>
+        <item name="android:windowTranslucentStatus">true</item>
+    </style>
+
+    <style name="Text"/>
+    <style name="Text.Light">
+        <item name="android:fontFamily">@font/ralewayx_thin</item>
+        <item name="fontFamily">@font/ralewayx_thin</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:textColor">@color/blackLight</item>
+    </style>
+    <style name="Text.Light.Small">
+        <item name="android:textSize">@dimen/font_small</item>
+    </style>
+    <style name="Text.Light.Medium">
+        <item name="android:textSize">@dimen/font_medium</item>
+    </style>
+    <style name="Text.Light.Large">
+        <item name="android:textSize">@dimen/font_large</item>
+    </style>
+    <style name="Text.Normal">
+        <item name="android:fontFamily">@font/ralewayx_regular</item>
+        <item name="fontFamily">@font/ralewayx_regular</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:textColor">@color/blackLight</item>
+    </style>
+    <style name="Text.Normal.Small">
+        <item name="android:textSize">@dimen/font_small</item>
+    </style>
+    <style name="Text.Normal.Medium">
+        <item name="android:textSize">@dimen/font_medium</item>
+    </style>
+    <style name="Text.Normal.Large">
+        <item name="android:textSize">@dimen/font_large</item>
+    </style>
+    <style name="Text.Normal.XLarge">
+        <item name="android:textSize">@dimen/font_extra_large</item>
+    </style>
+    <style name="Text.Bold">
+        <item name="android:fontFamily">@font/ralewayx_semi_bold</item>
+        <item name="fontFamily">@font/ralewayx_semi_bold</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:textColor">@color/primaryBlack</item>
+    </style>
+    <style name="Text.Bold.Small">
+        <item name="android:textSize">@dimen/font_small</item>
+    </style>
+    <style name="Text.Bold.Medium">
+        <item name="android:textSize">@dimen/font_medium</item>
+    </style>
+    <style name="Text.Bold.Large">
+        <item name="android:textSize">@dimen/font_large</item>
+    </style>
+
+    <style name="Menu"/>
+    <style name="Menu.Title" parent="Text.Bold.Large">
+        <item name="android:layout_marginTop">20dp</item>
+        <item name="android:layout_marginBottom">5dp</item>
+        <item name="android:textAlignment">textStart</item>
+    </style>
+    <style name="Menu.Row" parent="Text.Light.Medium">
+        <item name="android:layout_marginTop">10dp</item>
+        <item name="android:textAlignment">textStart</item>
+    </style>
+
+    <style name="ReservationButton" >
+        <item name="android:background">@drawable/reservation_button_background</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:layout_margin">5dp</item>
+        <item name="android:fontFamily">@font/ralewayx_regular</item>
+        <item name="fontFamily">@font/ralewayx_regular</item>
+        <item name="android:textSize">16sp</item>
+    </style>
+
+
+    <style name="RatingBar">
+        <item name="android:progressDrawable">@drawable/trip_advisor_rating_bar</item>
+        <item name="android:indeterminateDrawable">@drawable/trip_advisor_rating_bar</item>
+        <item name="android:minHeight">15dp</item>
+        <item name="android:maxHeight">50dp</item>
+
+    </style>
+
+    <style name="ToolbarTitle" />
+    <style name="ToolbarTitle.Expanded" parent="Text.Normal.XLarge" >
+        <item name="android:textColor">@color/white</item>
+    </style>
+    <style name="ToolbarTitle.Collapsed" parent="Text.Normal.Large" >
+        <item name="android:textColor">@color/white</item>
+    </style>
+
+</resources>

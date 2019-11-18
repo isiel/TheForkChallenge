@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/restaurant_user_rate_container"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="30dp"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <TextView
+        style="@style/Text.Bold.Large"
+        android:id="@+id/rating_user_rating"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:visibility="gone"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="user rating"
+        tools:visibility="visible"/>
+
+    <TextView
+        style="@style/Text.Normal.Large"
+        android:id="@+id/rating_rate_distinction"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="20dp"
+        android:gravity="center"
+        android:visibility="gone"
+        app:layout_constraintTop_toBottomOf="@+id/rating_user_rating"
+        tools:text="rate distinction"
+        tools:visibility="visible"/>
+
+    <TextView
+        style="@style/Text.Light.Medium"
+        android:id="@+id/rating_user_count"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:visibility="gone"
+        app:layout_constraintTop_toBottomOf="@+id/rating_rate_distinction"
+        tools:text="user rate count"
+        tools:visibility="visible"/>
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

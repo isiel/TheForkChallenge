@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">The Fork Challenge</string>
+    <string name="action_settings">Settings</string>
+    <string name="trip_advisor_logo">Trip Advisor Logo</string>
+    <string name="address">%s, %s</string>
+    <string name="user_rating">%s / 10</string>
+    <string name="trip_advisor_rating">%s / 5</string>
+    <string name="user_rate_count">%s ratings</string>
+    <string name="avg_price">Card price %s %s</string>
+    <string name="restaurant_menu">RESTAURANT MENU</string>
+    <string name="reservation_button_label">MAKE A RESERVATION</string>
+</resources>

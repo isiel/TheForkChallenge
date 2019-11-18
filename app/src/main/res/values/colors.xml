@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#00B087</color>
+    <color name="colorPrimaryDark">#00574B</color>
+    <color name="colorAccent">#D81B60</color>
+    <color name="white">#FFFFFF</color>
+    <color name="primaryBlack">#000A12</color>
+    <color name="blackLight">#4A4A4B</color>
+    <color name="gray">#D6D7D6</color>
+    <color name="transparentBlackLight">#AA000A12</color>
+    <color name="grayLight">#E5E6E5</color>
+    <color name="transparent">#00FFFFFF</color>
+    <color name="disabled_reservation_button">#1F00B087</color>
+</resources>

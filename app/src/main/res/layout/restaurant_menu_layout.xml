@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingStart="30dp"
+    android:paddingEnd="30dp"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <TextView
+        style="@style/Menu.Title"
+        android:id="@+id/restaurant_menu_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/restaurant_menu"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <LinearLayout
+        android:id="@+id/menu_start"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintTop_toBottomOf="@id/restaurant_menu_title" >
+
+        <TextView
+            style="@style/Menu.Title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Start"/>
+
+        <TextView
+            style="@style/Menu.Row"
+            android:id="@+id/menu_start_first"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            tools:text="Start 1"/>
+
+        <TextView
+            style="@style/Menu.Row"
+            android:id="@+id/menu_start_second"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            tools:text="Start 2"/>
+
+        <TextView
+            style="@style/Menu.Row"
+            android:id="@+id/menu_start_third"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            tools:text="Start 3"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/menu_main"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintTop_toBottomOf="@id/menu_start" >
+
+        <TextView
+            style="@style/Menu.Title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Main"/>
+
+        <TextView
+            style="@style/Menu.Row"
+            android:id="@+id/menu_main_first"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            tools:text="Main 1"/>
+
+        <TextView
+            style="@style/Menu.Row"
+            android:id="@+id/menu_main_second"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            tools:text="Main 2"/>
+
+        <TextView
+            style="@style/Menu.Row"
+            android:id="@+id/menu_main_third"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            tools:text="Main 3"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/menu_dessert"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintTop_toBottomOf="@id/menu_main">
+
+        <TextView
+            style="@style/Menu.Title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Dessert"/>
+
+        <TextView
+            style="@style/Menu.Row"
+            android:id="@+id/menu_dessert_first"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            tools:text="Dessert 1"/>
+
+        <TextView
+            style="@style/Menu.Row"
+            android:id="@+id/menu_dessert_second"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            tools:text="Dessert 2"/>
+
+        <TextView
+            style="@style/Menu.Row"
+            android:id="@+id/menu_dessert_third"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            tools:text="Dessert 3"/>
+    </LinearLayout>
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
