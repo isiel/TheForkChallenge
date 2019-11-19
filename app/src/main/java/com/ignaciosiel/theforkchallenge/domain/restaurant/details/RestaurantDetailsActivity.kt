@@ -1,10 +1,10 @@
 package com.ignaciosiel.theforkchallenge.domain.restaurant.details
 
-import android.content.Intent
 import android.os.Bundle
 import android.text.SpannableString
 import android.text.style.RelativeSizeSpan
 import android.view.View
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.res.ResourcesCompat
 import com.ignaciosiel.theforkchallenge.R
@@ -19,6 +19,7 @@ class RestaurantDetailsActivity : AppCompatActivity(), RestaurantDetailsView {
 
     private var presenter: RestaurantDetailsPresenter? = null
     private var restaurantId : Long? = null
+    lateinit var restaurantName : String
 
     companion object {
         const val RESTAURANT_ID_KEY = "RESTAURANT_ID"
@@ -50,6 +51,7 @@ class RestaurantDetailsActivity : AppCompatActivity(), RestaurantDetailsView {
 
     override fun showRestaurantDetails(restaurantDetails: RestaurantDetails) {
         restaurantId = restaurantDetails.id
+        restaurantName = restaurantDetails.name
         showImagesAndName(restaurantDetails)
         showRestaurantInfo(restaurantDetails)
         showMenu(restaurantDetails)
@@ -161,14 +163,16 @@ class RestaurantDetailsActivity : AppCompatActivity(), RestaurantDetailsView {
     }
 
     fun makeAReservation(view: View) {
-        //TODO: make reservation activity
-        val intent = Intent(this, RestaurantDetailsActivity::class.java)
-        intent.putExtra(RESTAURANT_ID_KEY, restaurantId)
-        startActivity(intent)
+        Toast.makeText(this,
+            resources.getString(R.string.reservation_details,
+                restaurantName), Toast.LENGTH_SHORT).show()
+        finish()
     }
 
     override fun showError() {
-        //Not yet implemented
+        Toast.makeText(this,
+            resources.getString(R.string.error_message), Toast.LENGTH_SHORT).show()
+        finish()
     }
 
     override fun showReservationButton() {

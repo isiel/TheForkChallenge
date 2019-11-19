@@ -1,6 +1,6 @@
 package com.ignaciosiel.theforkchallenge.domain.restaurant.list
 
-import com.ignaciosiel.theforkchallenge.TestUtils
+import com.ignaciosiel.theforkchallenge.domain.restaurant.utils.TestUtils
 import com.ignaciosiel.theforkchallenge.data.model.RestaurantDetailsResumed
 import junit.framework.TestCase
 import org.junit.Assert

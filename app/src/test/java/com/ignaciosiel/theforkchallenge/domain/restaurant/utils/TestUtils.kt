@@ -1,4 +1,4 @@
-package com.ignaciosiel.theforkchallenge
+package com.ignaciosiel.theforkchallenge.domain.restaurant.utils
 
 import org.mockito.Mockito
 

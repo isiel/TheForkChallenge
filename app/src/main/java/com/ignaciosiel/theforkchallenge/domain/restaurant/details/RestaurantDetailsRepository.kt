@@ -27,15 +27,15 @@ class RestaurantDetailsRepository {
             .observeOn(AndroidSchedulers.mainThread())
             .subscribe(
                 { restaurantResult -> handleResponse(restaurantResult, listener) },
-                { error -> handleError(listener) }
+                { handleError(listener) }
             )
     }
 
-    fun handleResponse(restaurantResult: RestaurantResult, listener: RestaurantDetailsRepository.DetailsListener) {
+    fun handleResponse(restaurantResult: RestaurantResult, listener: DetailsListener) {
         listener.onSuccess(restaurantResult.data)
     }
 
-    fun handleError(listener: RestaurantDetailsRepository.DetailsListener) {
+    fun handleError(listener: DetailsListener) {
         listener.onError()
     }
 
