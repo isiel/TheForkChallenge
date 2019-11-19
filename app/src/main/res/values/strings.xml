@@ -11,4 +11,7 @@
     <string name="reservation_button_label">MAKE A RESERVATION</string>
     <string name="reservation_details">¡Thank you for your reservation in %s!</string>
     <string name="error_message">¡Ups! There was an error fetching the data :(. Try again later.</string>
+    <string name="menu_start_label">Start</string>
+    <string name="menu_main_label">Main</string>
+    <string name="menu_dessert_label">Dessert</string>
 </resources>

@@ -8,11 +8,12 @@
     xmlns:tools="http://schemas.android.com/tools">
 
     <TextView
-        style="@style/Menu.Title"
         android:id="@+id/restaurant_menu_title"
+        style="@style/Menu.Title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/restaurant_menu"
+        app:layout_constraintStart_toStartOf="@+id/menu_start"
         app:layout_constraintTop_toTopOf="parent" />
 
     <LinearLayout
@@ -26,7 +27,7 @@
             style="@style/Menu.Title"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Start"/>
+            android:text="@string/menu_start_label"/>
 
         <TextView
             style="@style/Menu.Row"
@@ -62,7 +63,7 @@
             style="@style/Menu.Title"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Main"/>
+            android:text="@string/menu_main_label"/>
 
         <TextView
             style="@style/Menu.Row"
@@ -97,7 +98,7 @@
             style="@style/Menu.Title"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Dessert"/>
+            android:text="@string/menu_dessert_label"/>
 
         <TextView
             style="@style/Menu.Row"
@@ -120,7 +121,5 @@
             android:layout_height="wrap_content"
             tools:text="Dessert 3"/>
     </LinearLayout>
-
-
 
 </androidx.constraintlayout.widget.ConstraintLayout>
