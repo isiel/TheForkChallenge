@@ -18,7 +18,7 @@ class RestaurantListActivity : AppCompatActivity(), RestaurantListView, OnItemCl
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(com.ignaciosiel.theforkchallenge.R.layout.activity_restaurant_list)
+        setContentView(R.layout.activity_restaurant_list)
         attachPresenter()
         configureRecyclerView()
         getRestaurants()
