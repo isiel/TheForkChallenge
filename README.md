@@ -27,5 +27,6 @@ This screen is drawn using the data retreived from the Fork API.
 - I'm not an expert in Rx, so the way I used Rx to catch the callbacks of the API might not be the best.
 - The DTO used to parse the API response can be improved maybe using GSON adapters to serialize / deserialize the JSON to make the class more clean and readable.
 - Like I put in the comment, I couldn't test completely the Details presenter.
+- Adding a viewpager dot indicator
 
 
