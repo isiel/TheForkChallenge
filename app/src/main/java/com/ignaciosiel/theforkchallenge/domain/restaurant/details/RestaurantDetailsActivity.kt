@@ -33,19 +33,19 @@ class RestaurantDetailsActivity : AppCompatActivity(), RestaurantDetailsView {
         getRestaurantDetails()
     }
 
+    private fun setupToolbar() {
+        toolbar.navigationIcon = resources.getDrawable(R.mipmap.ic_navigation_back, theme)
+        toolbar.setNavigationOnClickListener { onBackPressed() }
+        toolbar_layout.setCollapsedTitleTypeface(ResourcesCompat.getFont(this, R.font.ralewayx_regular))
+        toolbar_layout.setExpandedTitleTypeface(ResourcesCompat.getFont(this, R.font.ralewayx_regular))
+    }
+
     private fun getRestaurantDetails() {
         restaurantId = intent?.extras?.get(RESTAURANT_ID_KEY) as Long
 
         restaurantId?.apply {
             presenter?.getRestaurantDetails(this.toString())
         }
-    }
-
-    private fun setupToolbar() {
-        toolbar.navigationIcon = resources.getDrawable(R.mipmap.ic_navigation_back, theme)
-        toolbar.setNavigationOnClickListener { onBackPressed() }
-        toolbar_layout.setCollapsedTitleTypeface(ResourcesCompat.getFont(this, R.font.ralewayx_regular))
-        toolbar_layout.setExpandedTitleTypeface(ResourcesCompat.getFont(this, R.font.ralewayx_regular))
     }
 
     override fun showRestaurantDetails(restaurantDetails: RestaurantDetails) {
@@ -148,7 +148,7 @@ class RestaurantDetailsActivity : AppCompatActivity(), RestaurantDetailsView {
             restaurantDetails.tripAdvisorReviewCount.toString())
     }
 
-    private fun attachPresenter() {
+    override fun attachPresenter() {
         presenter = lastCustomNonConfigurationInstance as RestaurantDetailsPresenter?
         if (presenter == null) {
             presenter = RestaurantDetailsPresenter(this, RestaurantDetailsRepository())
@@ -158,6 +158,13 @@ class RestaurantDetailsActivity : AppCompatActivity(), RestaurantDetailsView {
 
     override fun onRetainCustomNonConfigurationInstance(): Any? {
         return presenter
+    }
+
+    fun makeAReservation(view: View) {
+        //TODO: make reservation activity
+        val intent = Intent(this, RestaurantDetailsActivity::class.java)
+        intent.putExtra(RESTAURANT_ID_KEY, restaurantId)
+        startActivity(intent)
     }
 
     override fun showError() {
@@ -179,12 +186,5 @@ class RestaurantDetailsActivity : AppCompatActivity(), RestaurantDetailsView {
     override fun onDestroy() {
         presenter?.detachView()
         super.onDestroy()
-    }
-
-    fun makeAReservation(view: View) {
-        //TODO: make reservation activity
-        val intent = Intent(this, RestaurantDetailsActivity::class.java)
-        intent.putExtra(RESTAURANT_ID_KEY, restaurantId)
-        startActivity(intent)
     }
 }

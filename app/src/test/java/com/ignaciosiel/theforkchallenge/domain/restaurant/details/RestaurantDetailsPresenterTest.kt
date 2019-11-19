@@ -1,21 +1,16 @@
-package com.ignaciosiel.theforkchallenge
+package com.ignaciosiel.theforkchallenge.domain.restaurant.details
 
+import com.ignaciosiel.theforkchallenge.TestUtils
 import com.ignaciosiel.theforkchallenge.data.model.RestaurantDetails
-import com.ignaciosiel.theforkchallenge.domain.restaurant.details.RestaurantDetailsPresenter
-import com.ignaciosiel.theforkchallenge.domain.restaurant.details.RestaurantDetailsRepository
 import com.ignaciosiel.theforkchallenge.domain.restaurant.details.RestaurantDetailsRepository.DetailsListener
-import com.ignaciosiel.theforkchallenge.domain.restaurant.details.RestaurantDetailsView
 import junit.framework.TestCase.assertNull
 import org.junit.Assert.assertEquals
 import org.junit.Before
 import org.junit.Test
-import org.junit.runner.RunWith
 import org.mockito.Mock
 import org.mockito.Mockito.*
 import org.mockito.MockitoAnnotations
-import org.mockito.junit.MockitoJUnitRunner
 
-@RunWith(MockitoJUnitRunner::class)
 class RestaurantDetailsPresenterTest {
 
     @Mock
@@ -39,7 +34,8 @@ class RestaurantDetailsPresenterTest {
         verify(view)?.showLoading()
         verify(repository).getRestaurantDetails(
             TestUtils.eq("1234"),
-            TestUtils.any(DetailsListener::class.java))
+            TestUtils.any(DetailsListener::class.java)
+        )
 
     }
 
@@ -52,9 +48,15 @@ class RestaurantDetailsPresenterTest {
         presenter.getRestaurantDetails("1234")
 
         verify(view)?.showLoading()
-        verify(repository, never()).getRestaurantDetails(TestUtils.any(String::class.java),
-            TestUtils.any(DetailsListener::class.java))
-        verify(presenter).returnRestaurantDetails(TestUtils.eq(expectedRestaurant))
+        verify(repository, never()).getRestaurantDetails(
+            TestUtils.any(String::class.java),
+            TestUtils.any(DetailsListener::class.java)
+        )
+        verify(presenter).returnRestaurantDetails(
+            TestUtils.eq(
+                expectedRestaurant
+            )
+        )
     }
 
     @Test
@@ -81,7 +83,7 @@ class RestaurantDetailsPresenterTest {
 
     @Test
     fun testOnSuccess_shouldSaveRestaurantCallViewSuccess() {
-        val expectedRestaurant = RestaurantDetails("name", "1234")
+        val expectedRestaurant = RestaurantDetails(1234L, "name")
 
         presenter.onSuccess(expectedRestaurant)
 
@@ -91,7 +93,7 @@ class RestaurantDetailsPresenterTest {
 
     @Test
     fun testReturnRestaurantDetails_shouldHideLoadingAndCallViewSuccess() {
-        val expectedRestaurant = RestaurantDetails("name", "1234")
+        val expectedRestaurant = RestaurantDetails(1234L, "name")
 
         presenter.returnRestaurantDetails(expectedRestaurant)
 

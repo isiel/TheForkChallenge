@@ -1,8 +1,7 @@
-package com.ignaciosiel.theforkchallenge
+package com.ignaciosiel.theforkchallenge.domain.restaurant.details
 
 import com.ignaciosiel.theforkchallenge.data.model.RestaurantDetails
 import com.ignaciosiel.theforkchallenge.data.model.RestaurantResult
-import com.ignaciosiel.theforkchallenge.domain.restaurant.details.RestaurantDetailsRepository
 import org.junit.Before
 import org.junit.Test
 import org.mockito.Mock
@@ -30,7 +29,7 @@ class RestaurantDetailsRepositoryTest {
 
     @Test
     fun testSuccessResult_shouldCallSuccessListener() {
-        val expectedResult = RestaurantResult(RestaurantDetails(id = 0L, name = ""))
+        val expectedResult = RestaurantResult(RestaurantDetails(1234L, "name"))
 
         repository.handleResponse(expectedResult, listener)
         verify(listener).onSuccess(expectedResult.data)
