@@ -28,6 +28,6 @@ This screen is drawn using the data retreived from the Fork API.
 - The DTO used to parse the API response can be improved maybe using GSON adapters to serialize / deserialize the JSON to make the class more clean and readable.
 - Like I put in the comment, I couldn't test completely the Details presenter.
 - Adding a viewpager dot indicator
-- Unit Testing the activity class 
+- Unit Testing the activity classes 
 
 
