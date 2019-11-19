@@ -24,15 +24,12 @@
             app:collapsedTitleTextAppearance="@style/ToolbarTitle.Collapsed"
             app:toolbarId="@+id/toolbar">
 
-            <!-- TODO: Replace with view pager with images -->
-            <com.facebook.drawee.view.SimpleDraweeView
-                android:id="@+id/restaurant_image"
+            <androidx.viewpager.widget.ViewPager
+                android:id="@+id/restaurant_images_view_pager"
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/app_bar_height"
-                app:placeholderImage="@color/grayLight"
                 android:fitsSystemWindows="true"
-                android:scaleType="centerCrop"
-                app:layout_collapseMode="parallax"/>
+                app:layout_collapseMode="parallax" />
 
             <androidx.appcompat.widget.Toolbar
                 android:id="@+id/toolbar"

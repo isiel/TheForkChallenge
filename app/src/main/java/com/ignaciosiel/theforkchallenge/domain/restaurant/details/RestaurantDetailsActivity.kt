@@ -57,10 +57,16 @@ class RestaurantDetailsActivity : AppCompatActivity(), RestaurantDetailsView {
     }
 
     override fun showImagesAndName(restaurantDetails: RestaurantDetails) {
-        //TODO: set image placeholder
-        restaurantDetails.picsMain?.url.apply {
-            restaurant_image.setImageURI(this)
+        val adapter: RestaurantImagesAdapter
+
+        if (restaurantDetails.picsDiaporama != null) {
+            adapter = RestaurantImagesAdapter(restaurantDetails.picsDiaporama!!, this)
+        } else {
+            adapter = RestaurantImagesAdapter(arrayListOf(restaurantDetails.picsMain!!), this)
         }
+
+        restaurant_images_view_pager.adapter = adapter
+
         toolbar_layout.title = restaurantDetails.name
     }
 

@@ -16,12 +16,11 @@ data class RestaurantDetails(@SerializedName(value="restaurant_id", alternate=["
     lateinit var address: String
     lateinit var city: String
     var picsMain: Picture? = null
-    lateinit var picsDiaporama : List<Picture>
+    var picsDiaporama : ArrayList<Picture>? = null
     @SerializedName(value="specialty", alternate=["speciality"]) lateinit var speciality: String
     var avgRate: Double? = null
     var rateCount: Long? = null
     var rateDistinction: String? = null
-    lateinit var description: String
     @SerializedName("card_start_1") lateinit var menuStart1: String
     @SerializedName("card_start_2") lateinit var menuStart2: String
     @SerializedName("card_start_3") lateinit var menuStart3: String
