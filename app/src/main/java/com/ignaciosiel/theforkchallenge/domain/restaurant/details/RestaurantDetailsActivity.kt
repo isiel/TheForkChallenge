@@ -18,7 +18,6 @@ import kotlinx.android.synthetic.main.restaurant_trip_advisor_rating_layout.*
 class RestaurantDetailsActivity : AppCompatActivity(), RestaurantDetailsView {
 
     private var presenter: RestaurantDetailsPresenter? = null
-    private var restaurantId : Long? = null
     lateinit var restaurantName : String
 
     companion object {
@@ -42,15 +41,12 @@ class RestaurantDetailsActivity : AppCompatActivity(), RestaurantDetailsView {
     }
 
     private fun getRestaurantDetails() {
-        restaurantId = intent?.extras?.get(RESTAURANT_ID_KEY) as Long
-
-        restaurantId?.apply {
+        intent?.extras?.get(RESTAURANT_ID_KEY)?.apply {
             presenter?.getRestaurantDetails(this.toString())
         }
     }
 
     override fun showRestaurantDetails(restaurantDetails: RestaurantDetails) {
-        restaurantId = restaurantDetails.id
         restaurantName = restaurantDetails.name
         showImagesAndName(restaurantDetails)
         showRestaurantInfo(restaurantDetails)

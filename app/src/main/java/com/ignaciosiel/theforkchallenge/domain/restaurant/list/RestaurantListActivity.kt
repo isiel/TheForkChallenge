@@ -5,6 +5,7 @@ import android.os.Bundle
 import android.view.View
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
+import com.ignaciosiel.theforkchallenge.R
 import com.ignaciosiel.theforkchallenge.data.model.RestaurantDetailsResumed
 import com.ignaciosiel.theforkchallenge.domain.restaurant.details.RestaurantDetailsActivity
 import kotlinx.android.synthetic.main.activity_restaurant_list.*
@@ -42,6 +43,7 @@ class RestaurantListActivity : AppCompatActivity(), RestaurantListView, OnItemCl
         val intent = Intent(this, RestaurantDetailsActivity::class.java)
         intent.putExtra(RestaurantDetailsActivity.RESTAURANT_ID_KEY, id)
         startActivity(intent)
+        overridePendingTransition(R.anim.enter, R.anim.exit);
     }
 
     override fun showLoading() {
