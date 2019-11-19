@@ -3,7 +3,7 @@ This is a repository for the Android challenge for The Fork.
 
 ### Description
 
-I used the MVP arquitecture. The are two screens: one with a list of restaurants and the other with the restaurant details.
+I used the MVP arquitecture. There are two screens: one with a list of restaurants and the other with the restaurant details.
 
 #### Restaurant List
 
